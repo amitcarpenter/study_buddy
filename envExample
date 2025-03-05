@@ -1,0 +1,23 @@
+
+PORT=4007
+APP_URL=http://localhost:4007
+
+
+#========================= JWT ======================================
+AUTH_SECRETKEY=study_buddy_project
+
+
+#===================== SMTP Credential =========================
+SMTP_HOST=smtp.gmail.com
+EMAIL_USER=secondstagecti@gmail.com
+EMAIL_PASS=xqcvenutymhchnih
+
+
+#================= Database Credential =================================
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_PORT=3306
+DB_DATABASE=study_buddy_db
+
+
