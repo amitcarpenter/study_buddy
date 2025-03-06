@@ -1,29 +1,27 @@
-// Response handler utility functions
 
-const sendResponse = (res, success, statusCode, message, data = null) => {
-  return res.status(statusCode).json({
-    success: success,
+export const handleError = (res, statusCode, message) => {
+  return res.status(200).send({
+    success: false,
     status: statusCode,
-    message: message,
-    data: data || undefined,
+    message: message
   });
 };
 
-// General error handling function
-const handleError = (res, statusCode, message) => {
-  return sendResponse(res, false, statusCode, message);
+export const handleSuccess = (res, statusCode, message, ...data) => {
+  return res.status(200).json({
+    success: true,
+    status: statusCode,
+    message: message,
+    data: data.length > 0 ? data[0] : undefined,
+  });
 };
 
-// Success handler function
-const handleSuccess = (res, statusCode, message, ...data) => {
-  return sendResponse(res, true, statusCode, message, data.length > 0 ? data[0] : null);
+export const joiErrorHandle = (res, error) => {
+  return res.status(200).send({
+    success: false,
+    status: 400,
+    message: error.details[0].message
+  });
 };
 
-// Validation error handler
-const vallidationErrorHandle = (res, error) => {
-  const errorMessage = error.errors[0].msg;
-  return sendResponse(res, false, 400, errorMessage);
-};
 
-// Export the functions for reuse
-export { handleError, handleSuccess, vallidationErrorHandle };

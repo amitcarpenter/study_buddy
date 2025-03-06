@@ -2,62 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Session Expired</title>
-    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/session-expired.css">
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="icon" href="http://13.55.42.229/favicon.ico" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&display=swap"
+        rel="stylesheet" />
+    <style type="text/css">
         body {
             margin: 0;
             padding: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .success-box-wrap {
+            min-height: calc(100vh - 61px);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            padding: 30px;
         }
 
-        .container {
+        .success-box {
+            background: #efefef;
+            max-width: 350px;
+            padding: 30px;
             text-align: center;
-            background: #ffffff;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
+            border-radius: 20px;
+            margin: 0 auto;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
-            <h1>Session Expired</h1>
-            <p>Your session has expired. Please log in again to continue.</p>
-            <a href="http://192.168.29.100/login" class="btn">Login</a>
+    <div class="success-box-wrap">
+        <div class="success-box">
+            <img src="https://static.javatpoint.com/computer/images/how-to-fix-session-has-expired-error-on-the-internet.png"
+                title="Expired" alt="Success Image" align="center" width="100" />
         </div>
     </div>
 </body>
